@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Last Light</title>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="../Css/images/PK_Logo_1.png" class="logo" alt="">
+                <ul>
+                    <li><a href="index.html">Back To Main Page</a></li>
+                    <li><a href="#LL-about">Introduction</a></li>
+                    <li><a href="#gameplay">Gameplay</a></li>
+                    <li><a href="#graphics">Graphics</a></li>
+                    <li><a href="#AI">Enemy AI</a></li>
+                    <li><a href="#inventorySystem">Inventory System</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Last Light</h1>
+
+            </div>
+        </div>
+    </div>
+
+<!-------introduction-------->
+<div id="LL-about">
+    <div class="container">
+        <div class="LL-row">
+            <div class="LL-about-col-1">
+            <h2>Introduction</h2>
+            <br>
+            <p>Last Light is the second year school portfolio project, the game was made with Unreal Engine 5 <br>
+            using blueprints given the time frame of 8 weeks. Graphics were mostly made by the art team in exclusion of the last boss, <br>
+            which was downloaded from the Unreal engine asset store.<br>
+            <br>
+            Last Light is a fully working demo, but will still be polished further as it has been an excellent project to practice on. <br>
+            </p>
+            </div>
+            <div class="LL-about-col-2">
+                <!--<video width="600" height="400" controls>
+                    <source src="https://www.youtube.com/watch?v=tbMjKBksv8w&t=2s" type="video/mp4">
+                </video>-->
+                <iframe width="600" height="400"
+                        src="https://www.youtube.com/embed/tbMjKBksv8w">
+
+                </iframe>
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="openTab('about-LL')">About</p>
+                <p class="tab-links" onclick="openTab('projectDetails')">Project Details</p>
+                <p class="tab-links" onclick="openTab('projectLink')">Game Demo</p>
+            </div>
+            <div class="tab-contents active-tab" id="about-LL">
+                    <ul>
+                        <li><span>Last Light</span><br></li>
+                        <li><p>In Last Light you assume the role of a lone templar who finds himself in a strange dungeon.<br>
+                        His mission is simple, fight against the demonic forces that dwell within and vanquish the angel of death Azrael.</p></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectDetails">
+                    <ul>
+                        <li><span>Game Engine</span><br>The game was made with Unreal Engine 5</li>
+                        <!--<li><span>Audio</span><br></li>-->
+                        <li><span>Timeframe</span><br>8 weeks</li>
+                        <li><span>Team Size</span><br>Team fo 6 (4 coders and 2 artists)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectLink">
+                    <ul>
+                        <li><p>Due to the large file size the game is not playable on Itch.io,<br>
+                        I can provide a downloadable version on request.</p></li>
+
+                    </ul>
+                </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<!-------gameplay----------->
+<div id="gameplay">
+    <div class="container">
+        <h2>Gameplay</h2>
+        <p>
+            The game is played from isometric view, controls are keyboard and mouse. <br>
+            Aim of the game is to loot items and clear the dungeon all the way to the boss,<br>
+            while avoiding devious traps and battling foes on the way.
+            Implemented mechanics: Fast/Heavy attack,block,abilities(1-3 + ult,dodge roll)<br><br>
+            <img src="../Css/images/Last_Light_Abilities.png" height="400" width="800" alt=""/></p>
+    </div>
+</div><br>
+<!-------graphics---------->
+<div id="graphics">
+    <div class="container">
+        <h2>Graphics</h2>
+        <p>
+            Low poly graphics were chosen for the game given the timeframe.<br>
+            The art team made assets for the game from scratch,<br>
+            with sole exception being the last boss Azrael. <br>
+
+        </p>
+    </div>
+</div>
+<!-------AI---------->
+<div id="AI">
+    <div class="container">
+        <h2>Enemy AI</h2>
+        <p>
+            Ai logic was made using a behaviour tree for streamlined implementation, <br>
+            basic enemies(pawns) have a simpler implementation of following and attacking the player, <br>
+            while the more advanced halberdiers(rooks) have logic for better positioning and combo attacks. <br>
+            The boss itself, has a more complex system to teleport around, ranged AOE attacks and a melee combo.
+        </p>
+    </div>
+</div>
+<!-----Inventory system---->
+<div id="inventorySystem">
+    <div class="container">
+        <h2>Inventory System</h2>
+        <br>
+        <h3>Spatial Inventory</h3>
+        <p>
+            The spatial inventory system was my personal assignment for the project. <br>
+            It is made in a modular fashion, so it can be implemented on objects such as chests, pouches, <br>
+            and the character itself. <br>
+            <br>
+            The inventory system is controlled by drag and dropping items within the inventory grid, <br>
+            equipment slots and containers possibly found around the map. <br>
+
+            Inventory system logic functions by calculating inventory tile sizes and indexes for item allocation, <br>
+            items within the grid and slots are handled as objects within a widgets that store the item data. <br>
+
+            When equipping or dropping items out of the inventory items are spawned from the stored data and spawned as blueprint items. <br>
+        </p><br>
+        <img src="../Css/images/Last_Light_InventoryComponent.png" height="600" width="1500" alt=""/>
+        <br><br>
+        <h3>Items And Weapons</h3>
+        <p>
+            Items implement a widget for storing data and to enable drag dropping. <br>
+            When within the inventory the object consists of thumbnails for the base icon, rotated icon, and the actual object. <br>
+            Items spawned outside of the inventory implement an inherited item structure derived from a parent item and divided to child classes, <br>
+            such as weapon base-,shield base- and armor base classes(armor not implemented) for more control and ease of use. <br>
+        </p><br>
+        <img src="../Css/images/Last_Light_WBItem.png" height="600" width="1500" alt=""/>
+        <br><br>
+        <h3>Interactions</h3>
+        <p>
+            Interactions were done by implementing an interface and a widget to indicate the action available for the interactable item, <br>
+            interaction base and overlap checks were implemented within the parent item object to reduce the amount of redundant code and repetition. <br>
+            Items implementing the interface have the possibility to customize interaction texts within the blueprints for better indicators on the ongoing action. <br>
+        </p>
+    </div>
+</div>
+<script>
+
+    const tabLinks = document.getElementsByClassName("tab-links");
+    const tabContents = document.getElementsByClassName("tab-contents");
+
+    function openTab(tabName){
+        let tabLink;
+        for (tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+
+        let tabContent;
+        for (tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
