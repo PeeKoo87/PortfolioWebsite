@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Grumpo's Adventures</title>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="assets/images/PK_Logo_1.png" class="logo" alt="">
+                <ul>
+                    <li><a href="index.html">Back To Main Page</a></li>
+                    <li><a href="#grumpo-about">Introduction</a></li>
+                    <li><a href="#graphics">Graphics</a></li>
+                    <li><a href="#audio">Audio</a></li>
+                    <li><a href="#animation">Animation</a></li>
+                    <li><a href="#saveAndUi">Save and UI</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Grumpo's Adventure</h1>
+            </div>
+        </div>
+    </div>
+
+<!----Introduction---->
+<div id="grumpo-about">
+    <div class="container">
+        <div class="g-row">
+            <div class="grumpo-about-col-1">
+                <h2>Introduction</h2>
+                <br>
+                <p>The game is my first actual game I have ever made, <br>
+                Grumpo's Adventure is my first year school portfolio project assignment. <br>
+                I started with only the basic knowledge of c# and unity at the start
+                of the project and had to learn as the project progressed. <br>
+                While the game is still in demo phase it has been a wonderful experience,
+                although quite challenging considering the timeframe. <br>
+                <br>
+                In the sections below I will go in to detail on the game itself,
+                skills and software I needed to learn for making the game.</p>
+
+            </div>
+            <div class="grumpo-about-col-2">
+                <!---<img src="https://placehold.co/600x400" alt="">--->
+                <video width="600" height="400" controls>
+                    <source src="assets/videos/GrumpoDemoFinal.mp4" type="video/mp4">
+                </video>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('about-grumpo')">About</p>
+                    <p class="tab-links" onclick="openTab('projectDetails')">Project Details</p>
+                    <p class="tab-links" onclick="openTab('projectLink')">Itch.io Link</p>
+                </div>
+                <div class="tab-contents active-tab" id="about-grumpo">
+                    <ul>
+                        <li><span>Grumpo's Adventures</span><br>is a 2D platformer game about a viking traversing through levels<br>
+                        while trying to recover his lost possessions, <br>
+                        battling foes while searching lands near and far!. </li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectDetails">
+                    <ul>
+                        <li><span>Game Engine</span><br>The game was made with Unity</li>
+                        <li><span>Audio</span><br>Sounds were implemented using Fmod</li>
+                        <li><span>Timeframe</span><br>8 weeks</li>
+                        <li><span>Team Size</span><br>Solo</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectLink">
+                    <ul>
+                        <li><p>My Itch account: PeeKoo87</p></li>
+                        <li></li><a href="https://peekoo87.itch.io/grumpos-adventure-demo">Click Here!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------graphics-------->
+<div id="graphics">
+    <div class="container">
+        <h2>Graphics</h2>
+        <p>Graphics were partly made using photoshop and most of the assets are from unity asset store, <br>
+         player character and the goblin enemy both have bone structures, <br>
+         and were animated through manipulating the bone structures within unity animator.<br>
+         Backgrounds have a parallax effect implemented on them to make a smoother feel while playing the game,<br>
+         backgrounds and level graphics have been imported from unity asset store using free assets for this project.</p>
+    </div>
+</div>
+
+<!--------Audio----------->
+<div id="audio">
+    <div class="container">
+        <h2>Audio</h2>
+        <p>Sounds for the game were implemented using FMOD,
+         i started learning FMOD usage for the project and still has room for improvement, although i did get a grasp of the basics. <br>
+         I Implemented the sounds for the player and enemy within the animator for more precise timing, <br>
+         i did fiddle around with implementing sound effects through code, <br>
+         but since this was my first solo project using animator was within my range of skills and easiest to implement within the timeframe of the project.</p>
+    </div>
+</div>
+<!--------Animation------->
+<div id="animation">
+    <div class="container">
+        <h2>Animation</h2>
+        <p>Animations within the game function based on a statemachine, I found it the most efficient way of doing things regarding this game.<br>
+         The animation logic is separated within base states and substates to keep the process more organized,<br>
+         player animations are divided to two main states ground- and air states which separate things like air attack animations, <br>
+         falling, basic movement and attack patterns.</p>
+        <img src="assets/images/animator1.PNG" height="547" width="1007" alt="Animation Placeholder" >
+    </div>
+</div>
+<!-------Save and UI------->
+<div id="saveAndUi">
+    <div class="container">
+        <h2>Save And UI</h2>
+        <p>
+            Save and UI functionality was the most challenging part of the project, the save system in game uses a data persistence system,<br>
+            which saves all collected item, player position and encrypts save game data. <br>
+            The game data is saved in a json file which encrypted and decrypted during the save and load functions, <br>
+            items have their own unique randomly generated id:s to make sure there are no duplicate values within the serialized dictionaries within the script. <br>
+            UI functions are operated through code as one would expect and were fairly straightforward to implement, <br>
+            Menu option are separated to their own respective scripts to keep the functions organized and easier to read.<br>
+            In regard of the data persistence scripts i have to thank Shaped By Rain Studios on youtube for very easy to understand tutorials, <br>
+            they were very educational and easy to follow despite the very complex subject of data persistence.<br>
+            <br>
+            <p> Link to my repo: <a href="https://github.com/PeeKoo87/Portfolio-Project/tree/main/Grumpo's%20adventure/Assets/Scripts/DataPersistence" target="_blank" rel="noopener noreferrer">DataPersistence</a></p>
+            <br>
+            <p> This was the series of tutorials used: <a href="https://www.youtube.com/watch?v=aUi9aijvpgs&list=PL3viUl9h9k7-tMGkSApPdu4hlUBagKial" target="_blank" rel="noopener noreferrer">Link to Tutorial</a></p>
+    </div>
+</div>
+<!-------Reflection-------->
+<div id="reflection">
+    <div class="container">
+        <h2>Reflection</h2>
+        <p>
+          Grumpo's Adventure has be quite the adventure as a project, i had to learn most skills from the very beginning. <br>
+          FMOD was a completely unfamiliar software to work with, although while making this game i learnt the very basics on how to operate it, <br>
+          a good skill to have in my opinion, even if only on the very basic level. <br>
+          The process of making Grumpo's adventure also deepend my understanding of unity and c# programming, <br>
+          although it has been an intense process it has been a very exciting project to work on!<br>
+          <br>
+          On hindsight Fmod might have been a slight overkill on the project since most sound effect could have been implemented <br>
+          in a more simple fashion through animator and code itself. <br>
+          Slight fumbling on the order of things to be made happened as well but, I did learn my lesson, better planning makes for a smoother process!.<br>
+          <br>
+          The game is still a work in progress, but I intend to polish the game and my skills in the process.<br>
+          All in all if has been a very fruitful project in regard of gaining perspective and insight on game development process as a whole.
+        </p>
+    </div>
+</div>
+<script>
+
+    const tabLinks = document.getElementsByClassName("tab-links");
+    const tabContents = document.getElementsByClassName("tab-contents");
+
+    function openTab(tabName){
+        let tabLink;
+        for (tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+
+        let tabContent;
+        for (tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
