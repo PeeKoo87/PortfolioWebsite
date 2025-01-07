@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Last Light</title>
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="assets/images/PK_Logo_1.png" class="logo" alt="">
+                <ul>
+                    <li><a href="index.html">Back To Main Page</a></li>
+                    <li><a href="#RR-about">Introduction</a></li>
+                    <li><a href="#gameplay">Gameplay</a></li>
+                    <li><a href="#graphics">Graphics</a></li>
+                    <li><a href="#AI">Enemy AI</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Rave Rampage</h1>
+
+            </div>
+        </div>
+    </div>
+
+<!-------introduction-------->
+<div id="RR-about">
+    <div class="container">
+        <div class="RR-row">
+            <div class="RR-about-col-1">
+            <h2>Introduction</h2>
+            <br>
+            <p>Enter intro for rave rampage here!</p>
+            </div>
+            <div class="RR-about-col-2">
+                <!--<video width="600" height="400" controls>
+                    <source src="https://www.youtube.com/watch?v=m70312v6Sg0" type="video/mp4">
+                </video>-->
+                <iframe width="600" height="400"
+                        src="https://www.youtube.com/embed/v=m70312v6Sg0">
+
+                </iframe>
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="openTab('about-RR')">About</p>
+                <p class="tab-links" onclick="openTab('projectDetails')">Project Details</p>
+                <p class="tab-links" onclick="openTab('projectLink')">Game Demo</p>
+            </div>
+            <div class="tab-contents active-tab" id="about-RR">
+                    <ul>
+                        <li><span>Last Light</span><br></li>
+                        <li><p>In Last Light you assume the role of a lone templar who finds himself in a strange dungeon.<br>
+                        His mission is simple, fight against the demonic forces that dwell within and vanquish the angel of death Azrael.</p></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectDetails">
+                    <ul>
+                        <li><span>Game Engine</span><br>The game was made with Unreal Engine 5</li>
+                        <!--<li><span>Audio</span><br></li>-->
+                        <li><span>Timeframe</span><br>8 weeks</li>
+                        <li><span>Team Size</span><br>Team fo 6 (4 coders and 2 artists)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projectLink">
+                    <ul>
+                        <li><p>Due to the large file size the game is not playable on Itch.io,<br>
+                        I can provide a downloadable version on request.</p></li>
+
+                    </ul>
+                </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<!-------gameplay----------->
+<div id="gameplay">
+    <div class="container">
+        <h2>Gameplay</h2>
+        <p>Enter rave rampage gameplay info here!</p>
+    </div>
+</div><br>
+<!-------graphics---------->
+<div id="graphics">
+    <div class="container">
+        <h2>Graphics</h2>
+        <p>
+            Enter Rave rampage graphics info here
+
+        </p>
+    </div>
+</div>
+<!-------AI---------->
+<div id="AI">
+    <div class="container">
+        <h2>Enemy AI</h2>
+        <p>
+            Enter Rave rampage AI info here!
+        </p>
+    </div>
+</div>
+<!-----Inventory system---->
+<div id="inventorySystem">
+    <div class="container">
+        <h2>Inventory System</h2>
+        <br>
+        <h3>Spatial Inventory</h3>
+        <p>
+            Replace with something else?
+        </p>
+
+        <br><br>
+        <h3>Items And Weapons</h3>
+        <p>
+          Enter info about weapons and shop here!
+        </p>
+        <br><br>
+        <h3>Interactions</h3>
+        <p>
+            Replace with something else?
+        </p>
+    </div>
+</div>
+<script>
+
+    const tabLinks = document.getElementsByClassName("tab-links");
+    const tabContents = document.getElementsByClassName("tab-contents");
+
+    function openTab(tabName){
+        let tabLink;
+        for (tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+
+        let tabContent;
+        for (tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
