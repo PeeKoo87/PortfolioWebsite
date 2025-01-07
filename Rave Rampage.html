@@ -19,6 +19,7 @@
                     <li><a href="#gameplay">Gameplay</a></li>
                     <li><a href="#graphics">Graphics</a></li>
                     <li><a href="#AI">Enemy AI</a></li>
+                    <li><a href="#AudioSystem">Audio</a></li>
 
                 </ul>
             </nav>
@@ -36,7 +37,10 @@
             <div class="RR-about-col-1">
             <h2>Introduction</h2>
             <br>
-            <p>Enter intro for rave rampage here!</p>
+            <p>Rave Rampage was our third year portfolio project, Rave Rampage is a fast paced slasher/shooter game.<br>
+            You step in to the boots of a mercenary hunting his mark in a rave club filled with juiced up gang members, <br>
+            your target is the infamous Baron Bass, a drug lord and a DJ.
+            His minions will stop at nothing blocking your way through the increasingly tough waves of enemies!.</p>
             </div>
             <div class="RR-about-col-2">
                 <!--<video width="600" height="400" controls>
@@ -80,7 +84,9 @@
 <div id="gameplay">
     <div class="container">
         <h2>Gameplay</h2>
-        <p>Enter rave rampage gameplay info here!</p>
+        <p>The gameplay consists of fast paced shooter/slasher combat fighting waves of enemies,<br>
+        between the waves of enemies you gain access to the bar where you can buy power ups to give you an edge on the upcoming waves.<br>
+        </p>
     </div>
 </div><br>
 <!-------graphics---------->
@@ -88,8 +94,7 @@
     <div class="container">
         <h2>Graphics</h2>
         <p>
-            Enter Rave rampage graphics info here
-
+            The graphics are high poly, with a diesel punk/rave theme.
         </p>
     </div>
 </div>
@@ -98,30 +103,43 @@
     <div class="container">
         <h2>Enemy AI</h2>
         <p>
-            Enter Rave rampage AI info here!
+            I was in charge of the AI implementations for the game, The AI was done with a hand written finite state machine.<br>
+            This was my first attempt to make AI for a game and was a very interesting endeavour,<br>
+            most enemies use the same base logic with varying attack logic.<br>
+            The Enemy parameters and implementation was made using scriptable objects for easier customization and definition.<br>
+            AI behaviour was divided into three categories: Melee, Ranged and Boss.<br>
+            Melee:<br>
+            Melee enemies have functionalities for basic spin attack, charge/jump attack, chasing and customized navmesh link traversal.<br>
+            Ranged:<br>
+            Ranged enemies have base implementations depending on ranged enemy type, there are currently only two types of shooters: Basic and a sniper.<br>
+            Basic: shooting, reloading, chase, enemy unit avoidance and inverse kinematics for aiming.<br>
+            Sniper: snipers have the same functionalities as the basic version,<br>
+            but additionally favor specified sniper vantage points on higher ground instead of chasing.<br>
+            Boss:<br>
+            The Boss enemy is still under development but has basic functionality implemented to it,<br>
+            features already implemented are: chasing, multiple attack patterns(charge,belly flop, punches and a ground slam),<br>
+            the boss uses a custom animation synchronization for chopping up animations into smaller segments,<br>
+            this was done to improve control over the animations for i.e: punch windups and the actual punch segment of the animation.<br>
+
         </p>
     </div>
 </div>
-<!-----Inventory system---->
-<div id="inventorySystem">
+<!-----Audio---->
+<div id="AudioSystem">
     <div class="container">
-        <h2>Inventory System</h2>
+        <h2>Audio</h2>
+
         <br>
-        <h3>Spatial Inventory</h3>
+        <h3>Music</h3>
         <p>
-            Replace with something else?
+            The game has dynamic music, it changes according to the players current combo rating,<br>
+            getting more intense as the combo goes higher.
         </p>
 
-        <br><br>
-        <h3>Items And Weapons</h3>
-        <p>
-          Enter info about weapons and shop here!
-        </p>
-        <br><br>
-        <h3>Interactions</h3>
-        <p>
-            Replace with something else?
-        </p>
+        <br>
+        <h3>SFX</h3>
+        <p>Basic sound effects were added to all interactions, attacks and movement for both player and the enemies. </p>
+
     </div>
 </div>
 <script>
